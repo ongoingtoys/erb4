@@ -15,8 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include     #url = route to dif app or site
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', include('pages.urls')),     #page= app
+    path('admin/', admin.site.urls),     #admin.site= virtual environment  
 ]
